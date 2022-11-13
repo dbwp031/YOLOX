@@ -19,3 +19,4 @@ class Exp(MyExp):
         head = YOLOXHead(self.num_classes, self.width, in_channels=in_channels, act=self.act)
         self.model = YOLOX(backbone, head)
         return self.model
+    
