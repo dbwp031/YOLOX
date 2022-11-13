@@ -97,6 +97,7 @@ def main():
         dynamic_axes={args.input: {0: 'batch'},
                       args.output: {0: 'batch'}} if args.dynamic else None,
         opset_version=args.opset,
+        training=torch.onnx.TrainingMode.TRAINING
     )
     logger.info("generated onnx model named {}".format(args.output_name))
 
